@@ -9,7 +9,7 @@ Este proyecto está dividido en dos partes. Por un lado, buscamos hacer la repre
 
 El trabajo fue inspirado por una propuesta de efecto rápido para videojuegos de la mano del creador de contenido *Minions Art*, en el cual explica cómo en Unity crea el efecto de fluido en botella.
 
-![image info](./resources/0.gif)
+![Error en imagen](./resources/0.gif)
 
 Centrados en el tema, se quiso realizar un proceso de estudio de varios efectos líquidos, concretamente los mencionados anteriormente; el objetivo era obtener un mayor realismo en cuanto a liquido al aplicar una mayor cantidad de detalles. Para este hecho nos basamos en una serie de videos tutorial del canal ThinMatrix llamados [OpenGL water tutorial](https://www.youtube.com/watch?v=HusvGeEDU_U&t=3s).
 
@@ -23,6 +23,8 @@ El proyecto fue dividido en dos partes. Por un lado se trabajaría todo lo refer
 ## Demo
 ### Water texture
 ### Water geometry
-![image info](./resources/3.gif)
-![image info](./resources/4.gif)
+#### Unity
+![Error en imagen](./resources/3.gif)
+#### Processing
+![Error en imagen](./resources/4.gif)
 ## Conclusiones
