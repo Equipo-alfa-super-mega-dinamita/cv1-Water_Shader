@@ -85,7 +85,7 @@ void setup(){
     @Override
     public void execute(){
       prevTime = time;
-      time = millis()/1000.0;  //NECESARIO EN SEGUNDOS? ---TO DO---   ---TO DO---  ---TO DO--- 
+      time = millis()/1000.0;
       //time = millis();
       deltaTime = time-prevTime;
       //Reducir ondulacion con el tiempo
@@ -106,7 +106,6 @@ void setup(){
       lastPos = obj.position();
       lastRot = obj.orientation().eulerAngles();
       
-      //wm = Matrix.inverse(obj.view());
       wm = Matrix.multiply( Matrix.inverse(scene.eye().view()) , obj.worldMatrix() ); //Resultado aceptable. Operaciones siguen haciendose respecto al mundo (?)
       //wm = Matrix.multiply( Matrix.inverse(scene.eye().view()) , scene.eye().worldMatrix() ); //Resultado aceptable. Operaciones siguen haciendose respecto al mundo (?)
       viewDir = Vector.subtract(obj.position(),scene.eye().position());
@@ -116,21 +115,7 @@ void setup(){
   task.run();
 }
 
-void draw(){  
-  
-  /*prevTime = time;
-  time = millis()/1000.0;  //NECESARIO EN SEGUNDOS? ---TO DO---   ---TO DO---  ---TO DO--- 
-  //time = millis();
-  deltaTime = time-prevTime;
-  //Reducir ondulacion con el tiempo
-  wobbleToAddX = lerp(wobbleToAddX,0,deltaTime*recovery);
-  wobbleToAddZ = lerp(wobbleToAddZ,0,deltaTime*recovery);
-  //Hacer una onda sinusoidal de la ondulacion
-  pulse = TWO_PI * wobbleSpeed;
-  wobbleAmountX = wobbleToAddX * sin(pulse*time);
-  wobbleAmountZ = wobbleToAddZ * sin(pulse*time);
-  viewDir = Vector.subtract(obj.position(),scene.eye().position());
-  */
+void draw(){    
   
   waterShader.set("_WobbleX",wobbleAmountX);
   waterShader.set("_WobbleZ",wobbleAmountZ);     
@@ -138,19 +123,6 @@ void draw(){
   PMatrix3D aux = new PMatrix3D(wm.m00(),wm.m01(),wm.m02(),wm.m03(),wm.m10(),wm.m11(),wm.m12(),wm.m13(),wm.m20(),wm.m21(),wm.m22(),wm.m23(),wm.m30(),wm.m31(),wm.m32(),wm.m33());
   waterShader.set("worldMat",aux);
   shader(waterShader);
-  //println("delta: "+deltaTime);
-  //println("AngVel: "+angularVelocity);
-  /*
-  //Velocidad
-  velocity = Vector.multiply( Vector.subtract(lastPos,obj.position() ) , 1/deltaTime); 
-  angularVelocity = Vector.subtract(obj.orientation().eulerAngles(),lastRot);
-  //Agregar velocidad restringida a la ondulación
-  wobbleToAddX = clamp((velocity.x() + (angularVelocity.z() * 0.2))*maxWobble,-maxWobble,maxWobble);
-  wobbleToAddZ = clamp((velocity.z() + (angularVelocity.x() * 0.2))*maxWobble,-maxWobble,maxWobble);
-  //Mantener posición anterior
-  lastPos = obj.position();
-  lastRot = obj.orientation().eulerAngles();
-  */
   
   background(125);
   scene.render();
