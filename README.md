@@ -17,9 +17,12 @@ Los anteriores recursos pueden tomarse como precedentes a nuestro tema tratado. 
 ## Objetivo
 Implementar un ejemplo de uso de shaders y la librería nub en processesing que simule varios comportamientos de un líquido.
 ## Diseño solución
+El proyecto fue dividido en dos partes. Por un lado se trabajaría todo lo referente al efecto de liquido en botella, y por el otro se trataría las propiedades de refracción y reflexión para posteriormente combinar estos dos.
 ### Water texture
 ### Water geometry
 ## Demo
 ### Water texture
 ### Water geometry
+![image info](./resources/3.gif)
+![image info](./resources/4.gif)
 ## Conclusiones
