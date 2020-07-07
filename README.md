@@ -31,3 +31,4 @@ El efecto de ondulación del líquido al mover o rotar el recipiente se logra ha
 #### Processing
 ![Error en imagen](./resources/4.gif)
 ## Conclusiones
+Se logró una porción del objetivo principal. La aplicación de los efectos de reflexión y refracción fue completada por su lado, mientras que se estableció lo básico del efecto de movimiento de liquido en una botella; quedo pendiente la combinación de ambas partes y el pulido de detalles.
