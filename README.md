@@ -15,7 +15,7 @@ Centrados en el tema, se quiso realizar un proceso de estudio de varios efectos 
 
 Los anteriores recursos pueden tomarse como precedentes a nuestro tema tratado. Aun así, después de una serie de indagaciones respecto a nuestro tema, no fue posible encontrar recurso alguno, semejante, asociado a [processing](https://processing.org/). Es de esta forma que se decidió implementar un ejemplo para este mismo, junto a la ayuda de la librería [nub](https://github.com/VisualComputing/nub#interactivity) 
 ## Objetivo
-Implementar un ejemplo de uso de shaders y la librería nub en processesing que simule varios comportamientos de un líquido.
+Implementar un ejemplo con uso de shaders y la librería nub en processesing que simule varios aspectos del agua.
 ## Diseño solución
 El proyecto fue dividido en dos partes. Por un lado se trabajaría todo lo referente al efecto de liquido en botella, y por el otro se trataría las propiedades de refracción y reflexión para posteriormente combinar estos dos. En ambos casos se empezó estudiando los ejemplos anteriormente mencionados, para posteriormente ser implementados en processing.
 ### Water texture
@@ -31,3 +31,4 @@ El efecto de ondulación del líquido al mover o rotar el recipiente se logra ha
 #### Processing
 ![Error en imagen](./resources/4.gif)
 ## Conclusiones
+Se logró una porción del objetivo principal. La aplicación de los efectos de reflexión y refracción fue completada por su lado, mientras que se estableció lo básico del efecto de movimiento de liquido en una botella; quedo pendiente la combinación de ambas partes y el pulido de detalles.
