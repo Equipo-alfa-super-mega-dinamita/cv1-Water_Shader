@@ -7,7 +7,7 @@
 ## Introducción
 Este proyecto está dividido en dos partes. Por un lado, buscamos hacer la representación del movimiento de un fluido en un objeto, es decir, ondulaciones. Y por el otro lado, mostrar ciertas propiedades de los líquidos como la refracción y la reflexión.
 
-El trabajo fue inspirado por una propuesta de efecto rápido para videojuegos de la mano del creador de contenido *Minions Art*, en el cual explica cómo en Unity crea el efecto de fluido en botella.
+El trabajo fue inspirado por una propuesta de efecto rápido para videojuegos de la mano del creador de contenido [*Minions Art*](https://www.patreon.com/posts/18245226), en el cual explica cómo en Unity crea el efecto de fluido en botella.
 
 ![Error en imagen](./resources/0.gif)
 
