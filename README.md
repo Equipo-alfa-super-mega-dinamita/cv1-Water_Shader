@@ -1,4 +1,4 @@
-# Informe Water shader
+# Proyecto de Water shaders - Informe final
 |       Integrante      |                 github nick                   |
 |-----------------------|-----------------------------------------------|
 | Nicolai Romero         | [anromerom](https://github.com/anromerom) |
