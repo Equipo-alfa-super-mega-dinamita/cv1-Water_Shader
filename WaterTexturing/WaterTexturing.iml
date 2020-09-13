@@ -12,7 +12,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="core" level="project" />
     <orderEntry type="library" name="nub" level="project" />
+    <orderEntry type="library" name="processing" level="project" />
   </component>
 </module>

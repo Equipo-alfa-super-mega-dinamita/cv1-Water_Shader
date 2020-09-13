@@ -21,7 +21,6 @@ void main(void) {
 	vec4 worldPosition =  model * position;
 	gl_ClipDistance[0] = dot(worldPosition, plane);
 
-
 	gl_Position = transform * position;
 	vertTexCoord = texMatrix * vec4(texCoord, 1.0, 1.0);
 	vertColor = color;

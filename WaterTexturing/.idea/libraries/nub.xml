@@ -1,9 +1,10 @@
 <component name="libraryTable">
   <library name="nub">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Documents/Processing/libraries/nub/library/nub.jar!/" />
+      <root url="file://$PROJECT_DIR$/lib/nub" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/nub" recursive="false" />
   </library>
 </component>
