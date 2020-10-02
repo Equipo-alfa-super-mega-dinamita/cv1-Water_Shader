@@ -1,7 +1,5 @@
 package com.supermegadinamita;
 
-import com.jogamp.opengl.*;
-
 import nub.core.Graph;
 import nub.core.Node;
 import nub.core.constraint.AxisPlaneConstraint;
@@ -12,10 +10,8 @@ import nub.primitives.Vector;
 import nub.processing.Scene;
 import processing.core.*;
 import processing.event.MouseEvent;
-import processing.opengl.PJOGL;
 import processing.opengl.PShader;
 
-import static com.jogamp.opengl.GL2GL3.GL_CLIP_DISTANCE0;
 
 
 
@@ -29,9 +25,6 @@ public class Main extends PApplet {
 
     Node waterNode, rootNode, worldNode, skyNode, terrainNode, treeNode, moonNode, boatNode;
 
-    PJOGL  pgl;
-    GL2GL3 gl;
-
     int w = 800, h = 800;
     boolean constrained = false;
     float offset = 0;
@@ -42,12 +35,6 @@ public class Main extends PApplet {
 
     public void setup(){
         rectMode(CENTER);
-
-        // OpenGL config
-        hint(ENABLE_OPENGL_ERRORS);
-        pgl = (PJOGL) beginPGL();
-        gl = pgl.gl.getGL2GL3();
-        gl.glEnable(GL_CLIP_DISTANCE0);
 
         // nub graph scene
         scene = new Scene(this,  w, h);
