@@ -62,16 +62,18 @@ public class Main extends PApplet {
         // Default node: where everything except the water is drawn.
         rootNode = new Node();
         rootNode.setPosition(0,0);
+        rootNode.setHighlight(0);
 
         // Default node: where everything except the water is drawn.
         worldNode = new Node(rootNode);
         worldNode.setPosition(0,0);
-
+        worldNode.setHighlight(0);
 
         // Sky node:     (Using skybox, textures downloaded from https://imgur.com/a/WSGJ5 and https://www.cleanpng.com/png-skybox-texture-mapping-cube-mapping-desktop-wallpa-6020000/)
 
         skyNode = new Node(worldNode, skyShape(1200));
         skyNode.setPosition(new Vector(0,0,0));
+        skyNode.setHighlight(0);
         //skyNode.enablePicking(0);
 
         // Moon node  Plain texture, downloaded from SketchFab)
@@ -81,32 +83,32 @@ public class Main extends PApplet {
         //moonNode.enablePicking(0);
         moonNode.setOrientation(new Quaternion(0, PI*0.5f,0.75f*PI ));
         moonNode.scale(0.02f);
+        moonNode.setHighlight(0);
 
         // Tree node - Plain texture, downloaded from SketchFab
-
         treeNode = new Node(worldNode, treeShape);
         treeNode.setOrientation(new Quaternion(-PI/2, 0, 0));
         treeNode.scale(0.3f);
         treeNode.setPosition(new Vector(-150, 0, -150));
+        treeNode.setHighlight(0);
 
         // Boat node - Plain texture, downloaded from SketchFab
-
         boatNode = new Node(worldNode, boatShape);
         boatNode.scale(1.3f);
         boatNode.setPosition(new Vector( -100, 400, 100));
-
+        boatNode.setHighlight(0);
 
         // Terrain node: Terrain generation with Perlin Noise, based on Daniel Shiffman's tutorial
-
         terrainNode = new Node(worldNode, mountain);
         terrainNode.setPosition(new Vector(0,-100,0));
-        //terrainNode.enablePicking(0);
+        terrainNode.setHighlight(0);
+
 
         // Water node   (Quad textured with shaders)
-
         waterNode = new Node(rootNode, waterShape(400, null));
         waterNode.setPosition(new Vector(0,0,0));
-        //waterNode.enablePicking(0);
+        waterNode.setHighlight(0);
+
 
 
         // Scene configuration
@@ -147,12 +149,15 @@ public class Main extends PApplet {
         // nub graph scene for water refraction and reflection textures.
         waterScene = new Scene(waterGraphics, worldNode, w, h);
         waterScene.setType(Graph.Type.PERSPECTIVE);
+        waterScene.picking = false;
 
         reflectScene = new Scene(reflGraphics, worldNode);
         reflectScene.setType(Graph.Type.PERSPECTIVE);
+        reflectScene.picking = false;
 
         refractScene = new Scene(refrGraphics, worldNode);
         refractScene.setType(Graph.Type.PERSPECTIVE);
+        refractScene.picking = false;
 
         waterScene.setBounds(1300);
         reflectScene.setBounds(1300);
